@@ -13,10 +13,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  
+          node-version: '20'  # Specify Node.js version 20
 
       - name: Install dependencies
-        run: yarn install  
+        run: yarn install  # Execute yarn install to install dependencies
 
       - name: Run linter
-        run: yarn eslint src  
+        env:
+          ESLINT_USE_FLAT_CONFIG: true  
+        run: yarn eslint src 
