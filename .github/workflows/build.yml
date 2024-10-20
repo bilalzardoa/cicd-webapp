@@ -22,7 +22,7 @@ jobs:
         env:
           ESLINT_USE_FLAT_CONFIG: false  
         run: yarn eslint .
-        
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v4
         with:
           context: .
           tags: zardoabilal/webapp:latest
