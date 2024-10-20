@@ -24,8 +24,8 @@ jobs:
         run: yarn eslint .
 
       - name: Build Docker image
-          uses: docker/build-push-action@v6
-          with:
-            context: .  
-            tags: zardoabilal/webapp:latest  
-            push: false 
+        uses: docker/build-push-action@v6
+        with:
+          context: .  
+          tags: zardoabilal/webapp:latest  
+          push: false 
